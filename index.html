@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" manifest="public/offline.manifest">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1.0, user-scalable=0">
+        <meta name="description" content=" ">
+        <meta name="author" content=" ">
+
+		<title>BoxStack</title>
+
+		<link type="text/css" href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link type="text/css" href="public/app.css?_v=0.2" rel="stylesheet">
+	</head>
+	<body style="height: 100vh;">
+
+		<div id="main-menu" class="bg-blue full-screen">
+			<div class="container text-center text-white full-height">
+				<div class="row full-height">
+					<div class="col-md-12 my-auto">
+						<h1 class="display-1">BoxStack</h1>
+						<button class='btn btn-info btn-lg' id='start-game'><h1>Classic</h1></button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="game-over" class="bg-danger full-screen" style="display: none;">
+			<div class="container text-center text-white full-height">
+				<div class="row full-height">
+					<div class="col-md-12 my-auto">
+						<h1 class="display-1">Game Over!</h1>
+						<button class='btn btn-default btn-lg' id='start-game'>Play Again?</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="score-overlay" class="full-screen" style="display:none;">
+			<div class="container text-center text-white full-height">
+				<div class="row full-height">
+					<div class="col-md-12 my-auto bg-white shadow">
+						<h1 class="display-1 overlay-value"></h1>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<main id="main-game" class="full-height" style="display: none;">
+
+			<div class="container-fluid full-height d-block d-md-none">
+				<div class="row bg-blue">
+					<div class="col-md-12 text-white">
+						<h1 class='text-center'>BoxStack</h1>
+					</div>
+				</div>
+				<div class="row py-2 border-bottom">
+					<div class="col-6">
+						<button class='btn btn-block btn-primary' id='start-game'>Restart</button>
+						<button class='btn btn-block btn-danger' id='end-game'>Exit</button>
+						<h5 class='text-center my-2'>Score: <strong class="My-Score"></strong></h5>
+					</div>
+					<div class="col-6">
+						<h5 class='text-center'>Your Box</h5>
+						<div class='Current-Box'></div>
+					</div>
+				</div>
+				<div class="row my-5">
+					<div class="row Game-Stacks"></div>
+				</div>
+				<div class="row mt-3 border-top pt-2">
+					<div class="col-md-12">
+						<h5 class='text-center'>Your Shelf</h5>
+						<div class="row Game-Shelf"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="container-fluid full-height d-none d-md-block">
+				<div class="row full-height">
+					<div class="col-md-2 border-right bg-blue text-white">
+						<div class="row">
+							<div class="col-md-12">
+								<h1 class='text-center my-5'>BoxStack</h1>
+							</div>
+							<div class="col-md-12 d-flex justify-content-around">
+								<button class='btn btn-primary' id='start-game'>Restart</button>
+								<button class='btn btn-danger' id='end-game'>Exit</button>
+							</div>
+							<div class="col-md-12 py-3 text-center">
+								<h4>Current Score</h4>
+								<h2 class="My-Score"></h2>
+							</div>
+							<div class="col-md-12 py-3">
+								<h4 class='text-center'>Your Box</h4>
+								<div class='Current-Box'></div>
+							</div>
+							<div class="col-md-12 py-3">
+								<h4 class='text-center'>Your Shelf</h4>
+								<div id='Game-Shelf'></div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-10">
+						<div class="row full-height Game-Stacks"></div>
+					</div>
+				</div>
+			</div>
+
+		</main>
+
+		<script src="vendor/jquery/jquery.min.js"></script>
+		<script src="vendor/popper/popper.min.js"></script>
+		<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+		<script src="vendor/lodash/lodash.js"></script>
+		<script src="dist/app.js?_v=0.2"></script>
+	</body>
+</html>

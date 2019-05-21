@@ -1,0 +1,12 @@
+CACHE MANIFEST
+
+vendor/bootstrap/css/bootstrap.min.css
+public/app.css
+vendor/jquery/jquery.min.js
+vendor/popper/popper.min.js
+vendor/bootstrap/js/bootstrap.min.js
+vendor/lodash/lodash.js
+dist/app.js
+
+NETWORK:
+*

@@ -1,0 +1,53 @@
+.full-screen {
+	height: 100vh;
+	width: 100vw;
+	left: 0;
+	top: 0;
+	z-index: 100;
+	position: absolute;
+}
+
+.full-height {
+	height: 100vh; /* Use vh as a fallback for browsers that do not support Custom Properties */
+	height: calc(var(--vh, 1vh) * 100);
+}
+
+.bg-orange {
+	background: #d08159;
+}
+
+.bg-blue {
+	background:#0d2b45;
+}
+
+.bg-light-blue {
+	background:#203c56;
+}
+
+* {
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none; /* Safari */
+	-khtml-user-select: none; /* Konqueror HTML */
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	user-select: none;
+
+	overflow-y: hidden; 
+}
+
+.box, .empty-space, .Stack {
+	cursor: pointer;
+}
+
+.Stack {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+	.Stack {
+		background:#203c56;
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+}
